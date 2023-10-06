@@ -1,0 +1,97 @@
+:root {
+  /* A. Colors */
+  /* Hex */
+  --white: #ffffff;
+  --black: #000000;
+  --gray-1: #eeeeee;
+  --gray-2: #dddddd;
+  --gray-3: #cccccc;
+  --gray-4: #bbbbbb;
+  --gray-5: #aaaaaa;
+  --primary-color: #3498db;
+  --secondary-color: #f1c40f;
+  --bg-color: var(--white);
+  --text-color: #222222;
+
+  /* RGB */
+  --white-rgb: 255, 255, 255;
+  --black-rgb: 0, 0, 0;
+  --gray-1-rgb: 238, 238, 238;
+  --gray-2-rgb: 221, 221, 221;
+  --gray-3-rgb: 204, 204, 204;
+  --gray-4-rgb: 187, 187, 187;
+  --gray-5-rgb: 170, 170, 170;
+  --primary-color-rgb: 52, 152, 219;
+  --secondary-color-rgb: 241, 196, 15;
+  --bg-color-rgb: var(--white-rgb);
+  --text-color-rgb: 34, 34, 34;
+
+  /* Fonts */
+  --heading-font-family: 'Gabarito', Arial, sans-serif;
+  --body-font-family: 'Noto Sans', Arial, sans-serif;
+
+  /* Breakpoints */
+  --bp-small: 576px;
+  --bp-medium: 768px;
+  --bp-large: 992px;
+  --bp-extra-large: 1200px;
+
+  /* Others */
+  font-size: 16px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: var(--body-font-family);
+  line-height: 1.5;
+  color: var(--text-color);
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 1rem;
+  font-weight: 400;
+  overflow-wrap: break-word;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
