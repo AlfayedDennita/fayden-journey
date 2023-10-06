@@ -1,5 +1,11 @@
+<script setup>
+import MainJumbotron from './MainJumbotron.vue';
+</script>
+
 <template>
-  <main></main>
+  <main>
+    <MainJumbotron />
+  </main>
 </template>
 
 <style scoped></style>

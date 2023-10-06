@@ -29,7 +29,7 @@ const navLinks = [
 ];
 
 watch(windowScrollY, (newWindowScrollY, prevWindowScrollY) => {
-  if (newWindowScrollY > 100 && newWindowScrollY > prevWindowScrollY) {
+  if (newWindowScrollY > 50 && newWindowScrollY > prevWindowScrollY) {
     isHeaderHidden.value = true;
   } else {
     isHeaderHidden.value = false;
@@ -96,6 +96,7 @@ onMounted(() => {
 .header {
   --header-height: 3.5rem;
 
+  z-index: 1;
   isolation: isolate;
   position: fixed;
   inset: 0 0 auto 0;
@@ -184,6 +185,7 @@ onMounted(() => {
 
 @media (width < 768px) {
   .header__nav {
+    z-index: 2;
     position: fixed;
     inset: var(--header-height) 0 0 0;
     translate: 100% 0;
