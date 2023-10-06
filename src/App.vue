@@ -1,8 +1,11 @@
-<script setup></script>
+<script setup>
+import MainHeader from './components/MainHeader.vue';
+import MainContent from './components/MainContent.vue';
+</script>
 
 <template>
-  <h1>Hello World!</h1>
-  <p>Welcome to <b>Fayden Journey</b></p>
+  <MainHeader />
+  <MainContent />
 </template>
 
 <style scoped></style>

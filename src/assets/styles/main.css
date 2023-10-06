@@ -4,7 +4,7 @@
   isolation: isolate;
 }
 
-sr-only {
+.sr-only {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -14,5 +14,17 @@ sr-only {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border-width: 0;
-  visibility: hidden;
+}
+
+.container {
+  --container-margin: 2.5rem;
+  --container-breakpoint: var(--bp-extra-large);
+
+  width: calc(min(100%, var(--container-breakpoint)) - var(--container-margin));
+  margin-inline: auto;
+}
+
+.no-list {
+  list-style: none;
+  padding: 0;
 }
