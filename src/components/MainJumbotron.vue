@@ -73,7 +73,9 @@ onMounted(() => {
 
 <style scoped>
 .jumbotron {
+  position: relative;
   padding-block: 3.5rem 1.5rem;
+  overflow: hidden;
 }
 
 @media (width >= 768px) {
@@ -294,7 +296,7 @@ onMounted(() => {
 .jumbotron__decoration {
   z-index: -1;
   inset: -15rem -15rem auto auto;
-  position: fixed;
+  position: absolute;
   height: 30rem;
   aspect-ratio: 1 / 1;
   border-radius: 50%;
