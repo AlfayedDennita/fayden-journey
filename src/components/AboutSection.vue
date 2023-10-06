@@ -7,6 +7,7 @@ import JourneySection from './JourneySection.vue';
     id="about"
     title="Who Am I?"
     icon-class="fas fa-user-ninja"
+    icon-color-variant="primary"
     description="First, let's start by knowing about me."
   >
     <div class="about-section__content">

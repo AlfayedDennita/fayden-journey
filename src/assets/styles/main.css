@@ -4,6 +4,16 @@
   isolation: isolate;
 }
 
+body::-webkit-scrollbar {
+  width: 1rem;
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 5rem;
+  background-image: linear-gradient(225deg, var(--primary-color) 50%, var(--secondary-color) 50%);
+  border: 0.25rem solid var(--bg-color);
+}
+
 .sr-only {
   position: absolute;
   width: 1px;

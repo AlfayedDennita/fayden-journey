@@ -8,6 +8,10 @@ defineProps({
     type: String,
     default: null,
   },
+  iconColorVariant: {
+    type: String,
+    default: 'primary',
+  },
   description: {
     type: String,
     default: null,
@@ -20,7 +24,17 @@ defineProps({
     <div class="container journey-section__container">
       <header class="journey-section__header">
         <div class="journey-section__title">
-          <i v-if="iconClass" class="journey-section__title-icon" :class="iconClass" />
+          <i
+            v-if="iconClass"
+            class="journey-section__title-icon"
+            :class="[
+              iconClass,
+              {
+                'journey-section__title-icon--primary-color': iconColorVariant === 'primary',
+                'journey-section__title-icon--secondary-color': iconColorVariant === 'secondary',
+              },
+            ]"
+          />
           <h2 class="journey-section__title-text">{{ title }}</h2>
         </div>
         <p class="journey-section__description">{{ description }}</p>
@@ -31,6 +45,10 @@ defineProps({
 </template>
 
 <style scoped>
+.journey-section {
+  overflow: hidden;
+}
+
 .journey-section__container {
   --container-breakpoint: var(--bp-large);
 
@@ -46,6 +64,9 @@ defineProps({
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  max-width: 45rem;
+  margin-inline: auto;
+  text-align: center;
 }
 
 .journey-section__title {
@@ -63,8 +84,15 @@ defineProps({
   position: absolute;
   inset: -1rem auto auto -1rem;
   font-size: 3rem;
-  color: var(--primary-color);
   opacity: 0.25;
+}
+
+.journey-section__title-icon--primary-color {
+  color: var(--primary-color);
+}
+
+.journey-section__title-icon--secondary-color {
+  color: var(--secondary-color);
 }
 
 .journey-section__description {

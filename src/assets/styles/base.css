@@ -3,6 +3,7 @@
   /* Hex */
   --white: #ffffff;
   --black: #000000;
+  --gray-0: #f8f8f8;
   --gray-1: #eeeeee;
   --gray-2: #dddddd;
   --gray-3: #cccccc;
@@ -16,6 +17,7 @@
   /* RGB */
   --white-rgb: 255, 255, 255;
   --black-rgb: 0, 0, 0;
+  --gray-0-rgb: 250, 250, 250;
   --gray-1-rgb: 238, 238, 238;
   --gray-2-rgb: 221, 221, 221;
   --gray-3-rgb: 204, 204, 204;
