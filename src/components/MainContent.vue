@@ -2,6 +2,7 @@
 import MainJumbotron from './MainJumbotron.vue';
 import AboutSection from './AboutSection.vue';
 import StacksSection from './StacksSection.vue';
+import WorksSection from './WorksSection.vue';
 </script>
 
 <template>
@@ -9,6 +10,7 @@ import StacksSection from './StacksSection.vue';
     <MainJumbotron />
     <AboutSection />
     <StacksSection />
+    <WorksSection />
   </main>
 </template>
 

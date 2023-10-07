@@ -4,57 +4,57 @@ import JourneySection from './JourneySection.vue';
 const stacks = [
   {
     id: '1',
-    iconClass: 'fas fa-language',
     title: 'Programming Languages',
     description: 'Several languages that I usually use, including markup languages.',
+    iconClass: 'fas fa-language',
     items: [
       {
-        iconClass: 'devicon-html5-plain colored',
         name: 'HTML5',
+        iconClass: 'devicon-html5-plain colored',
       },
       {
-        iconClass: 'devicon-css3-plain colored',
         name: 'CSS3',
+        iconClass: 'devicon-css3-plain colored',
       },
       {
-        iconClass: 'devicon-javascript-plain colored',
         name: 'JavaScript',
+        iconClass: 'devicon-javascript-plain colored',
       },
     ],
   },
   {
     id: '2',
-    iconClass: 'fas fa-screwdriver-wrench',
     title: 'Frameworks/Libraries/Tools',
     description: 'Frameworks, libraries, and tools that I use daily.',
+    iconClass: 'fas fa-screwdriver-wrench',
     items: [
       {
-        iconClass: 'devicon-nodejs-plain colored',
         name: 'Node.js',
+        iconClass: 'devicon-nodejs-plain colored',
       },
       {
-        iconClass: 'devicon-vuejs-plain colored',
         name: 'Vue.js',
+        iconClass: 'devicon-vuejs-plain colored',
       },
       {
-        iconClass: 'devicon-react-original colored',
         name: 'React',
+        iconClass: 'devicon-react-original colored',
       },
       {
-        iconClass: 'devicon-express-original colored',
         name: 'Express',
+        iconClass: 'devicon-express-original colored',
       },
       {
-        iconClass: 'devicon-mysql-plain colored',
         name: 'MySQL',
+        iconClass: 'devicon-mysql-plain colored',
       },
       {
-        iconClass: 'devicon-git-plain colored',
         name: 'Git',
+        iconClass: 'devicon-git-plain colored',
       },
       {
-        iconClass: 'devicon-figma-plain colored',
         name: 'Figma',
+        iconClass: 'devicon-figma-plain colored',
       },
     ],
   },

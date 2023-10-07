@@ -21,31 +21,40 @@ defineProps({
 
 <template>
   <section class="journey-section">
-    <div class="container journey-section__container">
-      <header class="journey-section__header">
-        <div class="journey-section__title">
-          <i
-            v-if="iconClass"
-            class="journey-section__title-icon"
-            :class="[
-              iconClass,
-              {
-                'journey-section__title-icon--primary-color': iconColorVariant === 'primary',
-                'journey-section__title-icon--secondary-color': iconColorVariant === 'secondary',
-              },
-            ]"
-          />
-          <h2 class="journey-section__title-text">{{ title }}</h2>
-        </div>
-        <p class="journey-section__description">{{ description }}</p>
-      </header>
-      <slot />
+    <div class="journey-section__wrapper">
+      <div class="container journey-section__container">
+        <header class="journey-section__header">
+          <div class="journey-section__title-container">
+            <div class="journey-section__title">
+              <i
+                v-if="iconClass"
+                class="journey-section__title-icon"
+                :class="[
+                  iconClass,
+                  {
+                    'journey-section__title-icon--primary-color': iconColorVariant === 'primary',
+                    'journey-section__title-icon--secondary-color':
+                      iconColorVariant === 'secondary',
+                  },
+                ]"
+              />
+              <h2 class="journey-section__title-text">{{ title }}</h2>
+            </div>
+          </div>
+          <p class="journey-section__description">{{ description }}</p>
+        </header>
+        <slot />
+      </div>
     </div>
   </section>
 </template>
 
 <style scoped>
 .journey-section {
+  scroll-margin-top: 1rem;
+}
+
+.journey-section__wrapper {
   overflow: hidden;
 }
 
@@ -64,6 +73,7 @@ defineProps({
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 1rem;
   max-width: 45rem;
   margin-inline: auto;
   text-align: center;
@@ -71,9 +81,12 @@ defineProps({
 
 .journey-section__title {
   position: relative;
+  display: inline;
+  line-height: 1;
 }
 
 .journey-section__title-text {
+  display: inline;
   font-family: var(--heading-font-family);
   font-size: 3rem;
   font-weight: 700;
@@ -82,7 +95,7 @@ defineProps({
 .journey-section__title-icon {
   z-index: -1;
   position: absolute;
-  inset: -1rem auto auto -1rem;
+  inset: -2.5rem auto auto -1rem;
   font-size: 3rem;
   opacity: 0.25;
 }

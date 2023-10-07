@@ -1,5 +1,5 @@
 <script setup>
-import { ref, watch, onMounted } from 'vue';
+import { ref, watch, onMounted, onUnmounted } from 'vue';
 import { FocusTrap } from 'focus-trap-vue';
 
 import HamburgerButton from './HamburgerButton.vue';
@@ -44,13 +44,22 @@ watch(isNavShown, (newIsNavShown) => {
   }
 });
 
+function scrollDocumentHandler() {
+  windowScrollY.value = window.scrollY;
+}
+
+function resizeWindowHandler() {
+  isOnSmallScreen.value = window.matchMedia('(width < 768px)').matches;
+}
+
 onMounted(() => {
-  window.addEventListener('scroll', () => {
-    windowScrollY.value = window.scrollY;
-  });
-  window.addEventListener('resize', () => {
-    isOnSmallScreen.value = window.matchMedia('(width < 768px)').matches;
-  });
+  document.addEventListener('scroll', scrollDocumentHandler);
+  window.addEventListener('resize', resizeWindowHandler);
+});
+
+onUnmounted(() => {
+  document.removeEventListener('scroll', scrollDocumentHandler);
+  window.removeEventListener('resize', resizeWindowHandler);
 });
 </script>
 
@@ -59,7 +68,12 @@ onMounted(() => {
     <header class="header" :class="{ 'header--hidden': isHeaderHidden }">
       <div class="container header__container">
         <h1 class="header__heading">
-          <a class="header__heading-link" href="/" title="Fayden Journey">
+          <a
+            class="header__heading-link"
+            href="/"
+            title="Fayden Journey"
+            @focus="isHeaderHidden = false"
+          >
             <img class="header__logo" src="/images/logo.png" alt="Fayden Logo" />
             <span class="sr-only">Fayden Journey</span>
           </a>
@@ -81,6 +95,7 @@ onMounted(() => {
                 :title="link.name"
                 :tabindex="!isNavShown && isOnSmallScreen ? -1 : 0"
                 @click="isNavShown = false"
+                @focus="isHeaderHidden = false"
               >
                 {{ link.name }}
               </a>
@@ -295,3 +310,9 @@ onMounted(() => {
   }
 }
 </style>
+
+<!-- <style>
+html {
+  scroll-padding-top: 3.5rem;
+}
+</style> -->
