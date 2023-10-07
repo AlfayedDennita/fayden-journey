@@ -26,3 +26,5 @@ coverage
 *.njsproj
 *.sln
 *.sw?
+
+do_not_upload
