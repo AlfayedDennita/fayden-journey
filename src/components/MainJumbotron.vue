@@ -92,7 +92,7 @@ onMounted(() => {
   justify-content: center;
   align-items: center;
   gap: 3rem;
-  padding: 1rem 2rem;
+  padding: 2rem;
   text-align: center;
 }
 

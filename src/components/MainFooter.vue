@@ -2,7 +2,7 @@
   <footer class="footer">
     <div class="container footer__container">
       <p class="footer__text">
-        Built with ❤️ by myself. Copyright &copy; {{ new Date().getFullYear() }}
+        Built with ❤️ by myself. Copyright &copy; {{ new Date().getFullYear() }}.
       </p>
     </div>
   </footer>

@@ -113,6 +113,7 @@ const works = [
               class="works-section__work-link"
               :href="work.url"
               target="_blank"
+              rel="external"
               :title="'Visit ' + work.title"
             >
               {{ work.name }}

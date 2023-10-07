@@ -65,7 +65,13 @@ defineProps({
   display: flex;
   flex-direction: column;
   gap: 4rem;
-  padding: 5rem 1rem;
+  padding-block: 5rem;
+}
+
+@media (width >= 576px) {
+  .journey-section__container {
+    padding-inline: 1rem;
+  }
 }
 
 .journey-section__header {
