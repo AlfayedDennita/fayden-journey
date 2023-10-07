@@ -13,6 +13,8 @@
   --secondary-color: #f1c40f;
   --bg-color: var(--white);
   --text-color: #222222;
+  --green: #27ae60;
+  --red: #c0392b;
 
   /* RGB */
   --white-rgb: 255, 255, 255;
@@ -27,6 +29,8 @@
   --secondary-color-rgb: 241, 196, 15;
   --bg-color-rgb: var(--white-rgb);
   --text-color-rgb: 34, 34, 34;
+  --green-rgb: 39, 174, 96;
+  --red-rgb: 192, 57, 43;
 
   /* Fonts */
   --heading-font-family: 'Gabarito', Arial, sans-serif;
@@ -77,6 +81,18 @@ select {
   font: inherit;
 }
 
+input,
+textarea {
+  width: 100%;
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+textarea {
+  resize: none;
+}
+
 p,
 h1,
 h2,
@@ -99,6 +115,10 @@ button {
   background: none;
   border: none;
   cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
 }
 
 ::selection {

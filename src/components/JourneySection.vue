@@ -64,7 +64,7 @@ defineProps({
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 4rem;
   padding: 5rem 1rem;
 }
 
