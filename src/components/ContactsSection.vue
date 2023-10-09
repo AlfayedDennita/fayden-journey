@@ -99,34 +99,38 @@ const socials = [
           <h3 class="contacts-section__form-title">Send a Message</h3>
         </header>
         <div class="contacts-section__form-inputs">
-          <div class="contacts-section__form-input-group">
+          <div class="contacts-section__form-input-group" title="Name">
             <label class="contacts-section__form-label" for="contact-form-name">Name</label>
             <input
               v-model="formData.name"
               class="contacts-section__form-input"
               id="contact-form-name"
               type="text"
+              :disabled="formStatus === 'sending'"
               required
             />
           </div>
-          <div class="contacts-section__form-input-group">
+          <div class="contacts-section__form-input-group" title="Email">
             <label class="contacts-section__form-label" for="contact-form-email">Email</label>
             <input
               v-model="formData.email"
               class="contacts-section__form-input"
               id="contact-form-email"
               type="email"
+              :disabled="formStatus === 'sending'"
               required
             />
           </div>
           <div
             class="contacts-section__form-input-group contacts-section__form-input-group--message"
+            title="Message"
           >
             <label class="contacts-section__form-label" for="contact-form-message">Message</label>
             <textarea
               v-model="formData.message"
               class="contacts-section__form-input contacts-section__form-input--message"
               id="contact-form-message"
+              :disabled="formStatus === 'sending'"
               required
             />
           </div>

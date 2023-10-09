@@ -81,6 +81,10 @@ select {
   font: inherit;
 }
 
+:is(input, button, textarea, select):disabled {
+  cursor: not-allowed;
+}
+
 input,
 textarea,
 select {
@@ -120,8 +124,4 @@ button {
   background: none;
   border: none;
   cursor: pointer;
-}
-
-button:disabled {
-  cursor: not-allowed;
 }
