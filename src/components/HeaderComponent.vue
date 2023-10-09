@@ -36,6 +36,14 @@ watch(windowScrollY, (newWindowScrollY, prevWindowScrollY) => {
   }
 });
 
+watch(isOnSmallScreen, (newIsOnSmallScreen) => {
+  if (newIsOnSmallScreen && isNavShown.value) {
+    document.body.style.overflowY = 'hidden';
+  } else {
+    document.body.style.overflowY = 'auto';
+  }
+});
+
 watch(isNavShown, (newIsNavShown) => {
   if (newIsNavShown) {
     document.body.style.overflowY = 'hidden';
@@ -79,7 +87,7 @@ onUnmounted(() => {
           </a>
         </h1>
 
-        <div class="header__hamburger-button-wrapper">
+        <div class="header__hamburger-button-container">
           <HamburgerButton v-model="isNavShown" />
         </div>
 
@@ -168,7 +176,7 @@ onUnmounted(() => {
 }
 
 .header__heading-link {
-  z-index: 2;
+  z-index: 1;
   position: relative;
 }
 
@@ -184,18 +192,18 @@ onUnmounted(() => {
   object-fit: contain;
 }
 
-.header__hamburger-button-wrapper {
+.header__hamburger-button-container {
   display: contents;
 }
 
-.header__hamburger-button-wrapper > * {
-  z-index: 2;
-}
-
 @media (width >= 768px) {
-  .header__hamburger-button-wrapper {
+  .header__hamburger-button-container {
     display: none;
   }
+}
+
+.header__hamburger-button-container > * {
+  z-index: 1;
 }
 
 @media (width < 768px) {
@@ -281,8 +289,8 @@ onUnmounted(() => {
   }
 
   .header__nav-link {
-    display: inline-block;
     width: 5rem;
+    display: inline-block;
     padding-block: 0.5rem;
     font-size: 1.05rem;
     font-weight: 600;
@@ -292,7 +300,7 @@ onUnmounted(() => {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-image: linear-gradient(to right, var(--text-color), var(--text-color));
+    background-color: var(--text-color);
     transition: text-decoration-color 0.25s;
   }
 
@@ -310,9 +318,3 @@ onUnmounted(() => {
   }
 }
 </style>
-
-<!-- <style>
-html {
-  scroll-padding-top: 3.5rem;
-}
-</style> -->

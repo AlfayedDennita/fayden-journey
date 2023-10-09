@@ -330,11 +330,11 @@ const socials = [
 }
 
 .contacts-section__socials-link {
+  width: 2.5rem;
+  height: 2.5rem;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 2.5rem;
-  height: 2.5rem;
   background-color: var(--gray-1);
   border-radius: 50%;
   font-size: 1.25rem;

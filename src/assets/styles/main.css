@@ -1,7 +1,7 @@
 @import './base.css';
 
-#app {
-  isolation: isolate;
+::selection {
+  background-color: rgba(var(--secondary-color-rgb), 0.25);
 }
 
 body::-webkit-scrollbar {
@@ -9,9 +9,13 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-thumb {
-  border-radius: 5rem;
   background-image: linear-gradient(225deg, var(--primary-color) 50%, var(--secondary-color) 50%);
+  border-radius: 5rem;
   border: 0.25rem solid var(--bg-color);
+}
+
+#app {
+  isolation: isolate;
 }
 
 .sr-only {

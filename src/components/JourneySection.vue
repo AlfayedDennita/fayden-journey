@@ -9,7 +9,9 @@ defineProps({
     default: null,
   },
   iconColorVariant: {
-    type: String,
+    validator(value) {
+      return ['primary', 'secodary'].includes(value);
+    },
     default: 'primary',
   },
   description: {

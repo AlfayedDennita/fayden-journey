@@ -100,7 +100,7 @@ const works = [
     icon-color-variant="primary"
     description="Below are several works that I created myself or with my awesome team."
   >
-    <div class="works-section__works">
+    <div class="works-section__content">
       <article v-for="work in works" :key="work.id" class="works-section__work">
         <div class="works-section__work-banner">
           <img class="works-section__work-banner-image" :src="work.logoSrc" :alt="work.name" />
@@ -124,7 +124,7 @@ const works = [
             </template>
           </h3>
           <p class="works-section__work-description">{{ work.description }}</p>
-          <ul class="no-list works-section__work-stacks">
+          <ul v-if="work.stacks" class="no-list works-section__work-stacks">
             <li v-for="stack in work.stacks" :key="stack.name" class="works-section__work-stack">
               <i
                 class="works-section__work-stack-icon"
@@ -146,7 +146,7 @@ const works = [
 </template>
 
 <style scoped>
-.works-section__works {
+.works-section__content {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;

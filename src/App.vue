@@ -1,13 +1,13 @@
 <script setup>
-import MainHeader from './components/MainHeader.vue';
-import MainContent from './components/MainContent.vue';
-import MainFooter from './components/MainFooter.vue';
+import HeaderComponent from './components/HeaderComponent.vue';
+import MainComponent from './components/MainComponent.vue';
+import FooterComponent from './components/FooterComponent.vue';
 </script>
 
 <template>
-  <MainHeader />
-  <MainContent />
-  <MainFooter />
+  <HeaderComponent />
+  <MainComponent />
+  <FooterComponent />
 </template>
 
 <style scoped></style>

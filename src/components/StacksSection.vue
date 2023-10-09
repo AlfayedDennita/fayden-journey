@@ -94,7 +94,6 @@ const stacks = [
 <style scoped>
 .stacks-section__content {
   display: grid;
-  grid-template-columns: 1fr;
   gap: 1.5rem;
 }
 
@@ -108,9 +107,9 @@ const stacks = [
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  border-radius: 0.5rem;
   padding: 2rem;
   background-color: var(--gray-0);
+  border-radius: 0.5rem;
 }
 
 .stacks-section__article-header {

@@ -12,8 +12,8 @@ defineEmits(['update:modelValue']);
   <button
     class="hamburger-button"
     :class="{ 'hamburger-button--open': modelValue }"
-    @click="$emit('update:modelValue', !modelValue)"
     :title="(modelValue ? 'Close' : 'Open') + ' Navigation Menu'"
+    @click="$emit('update:modelValue', !modelValue)"
   >
     <div v-for="i in 3" :key="i" class="hamburger-button__line" />
   </button>

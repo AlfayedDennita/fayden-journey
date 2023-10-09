@@ -11,7 +11,7 @@ onMounted(() => {
   let greetingIcon;
   let greetingText;
 
-  if (hours >= 22) {
+  if (hours >= 22 || hours <= 4) {
     greetingIcon = 'fas fa-moon';
     greetingText = 'Good Night!';
   } else if (hours >= 18) {
@@ -120,7 +120,6 @@ onMounted(() => {
 }
 
 .jumbotron__photo-container {
-  order: 2;
   flex-shrink: 0;
   width: 10rem;
   aspect-ratio: 1 / 1;
@@ -156,7 +155,7 @@ onMounted(() => {
 }
 
 .jumbotron__greeting {
-  order: 1;
+  order: -1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -191,7 +190,6 @@ onMounted(() => {
 }
 
 .jumbotron__pre-heading {
-  order: 3;
   font-size: 1.15rem;
   font-weight: 500;
 }
@@ -203,7 +201,6 @@ onMounted(() => {
 }
 
 .jumbotron__heading {
-  order: 4;
   position: relative;
   margin-block: 0.5rem;
   font-family: var(--heading-font-family);
@@ -233,7 +230,6 @@ onMounted(() => {
 }
 
 .jumbotron__welcome {
-  order: 5;
   margin-top: 0.5rem;
 }
 
@@ -260,6 +256,7 @@ onMounted(() => {
 .jumbotron__cta-icons {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .jumbotron__cta-icon {
@@ -295,8 +292,8 @@ onMounted(() => {
 
 .jumbotron__decoration {
   z-index: -1;
-  inset: -15rem -15rem auto auto;
   position: absolute;
+  inset: -15rem -15rem auto auto;
   height: 30rem;
   aspect-ratio: 1 / 1;
   border-radius: 50%;

@@ -82,8 +82,13 @@ select {
 }
 
 input,
-textarea {
+textarea,
+select {
   width: 100%;
+}
+
+input,
+textarea {
   border: none;
   outline: none;
   box-shadow: none;
@@ -119,8 +124,4 @@ button {
 
 button:disabled {
   cursor: not-allowed;
-}
-
-::selection {
-  background-color: rgba(var(--secondary-color-rgb), 0.25);
 }

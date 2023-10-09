@@ -1,5 +1,5 @@
 <script setup>
-import MainJumbotron from './MainJumbotron.vue';
+import JumbotronComponent from './JumbotronComponent.vue';
 import AboutSection from './AboutSection.vue';
 import StacksSection from './StacksSection.vue';
 import WorksSection from './WorksSection.vue';
@@ -8,7 +8,7 @@ import ContactsSection from './ContactsSection.vue';
 
 <template>
   <main>
-    <MainJumbotron />
+    <JumbotronComponent />
     <AboutSection />
     <StacksSection />
     <WorksSection />
