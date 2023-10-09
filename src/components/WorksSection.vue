@@ -9,7 +9,7 @@ const works = [
     url: 'https://soca.ai',
     description:
       'In MSIB Batch 4, I took part in an internship program at Soca AI. Soca AI is a company that has a web application focused on content creation and powered by generative AI. At Soca AI, I contribute to building, creating, and managing its front-end applications.',
-    logoSrc: '/images/works/soca-ai-logo.png',
+    logoSrc: 'https://storage.googleapis.com/fayden-journey/images/works/soca-ai-logo.png',
     tag: 'Internship',
     stacks: [
       {
@@ -33,7 +33,7 @@ const works = [
     url: 'https://forus-beta.vercel.app',
     description:
       'Forus is a forum app I built to fulfill my submission project in a Dicoding course: Menjadi React Web Developer Expert. I built this front-end app by consuming the data in the provided REST API. The app uses React as the main library and its ecosystem.',
-    logoSrc: '/images/works/forus-logo.png',
+    logoSrc: 'https://storage.googleapis.com/fayden-journey/images/works/forus-logo.png',
     tag: 'Featured',
     stacks: [
       {
@@ -61,7 +61,7 @@ const works = [
     url: 'https://alfayeddennita.github.io/koltra',
     description:
       'Koltra is a news app I created to fulfill my submission project in a Dicoding course. The course is titled "Belajar Dasar Pemrograman Web". I used vanilla technologies to create the app without using any complex frameworks and libraries.',
-    logoSrc: '/images/works/koltra-logo.png',
+    logoSrc: 'https://storage.googleapis.com/fayden-journey/images/works/koltra-logo.png',
     tag: 'Latest',
     stacks: [
       {
@@ -85,7 +85,7 @@ const works = [
     url: 'https://github.com/AlfayedDennita',
     description:
       "That's it, of course, I can't show all of my work here. I still have other projects that you can see via my GitHub account. There are even several projects there that are not related to web development. Just feel free to explore it!",
-    logoSrc: '/images/works/others.png',
+    logoSrc: 'https://storage.googleapis.com/fayden-journey/images/works/others.png',
     tag: 'Others',
     stacks: null,
   },
@@ -139,7 +139,7 @@ const works = [
 
     <img
       class="works-section__decoration"
-      src="images/decorations/yellow-subtle-waves.svg"
+      src="https://storage.googleapis.com/fayden-journey/images/decorations/yellow-subtle-waves.svg"
       alt=""
     />
   </JourneySection>

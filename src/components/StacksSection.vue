@@ -87,7 +87,11 @@ const stacks = [
       </article>
     </div>
 
-    <img class="stacks-section__decoration" src="images/decorations/blue-dots.svg" alt="" />
+    <img
+      class="stacks-section__decoration"
+      src="https://storage.googleapis.com/fayden-journey/images/decorations/blue-dots.svg"
+      alt=""
+    />
   </JourneySection>
 </template>
 

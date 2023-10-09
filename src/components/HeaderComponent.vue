@@ -82,7 +82,11 @@ onUnmounted(() => {
             title="Fayden Journey"
             @focus="isHeaderHidden = false"
           >
-            <img class="header__logo" src="/images/logo.png" alt="Fayden Logo" />
+            <img
+              class="header__logo"
+              src="https://storage.googleapis.com/fayden-journey/images/logo.png"
+              alt="Fayden Logo"
+            />
             <span class="sr-only">Fayden Journey</span>
           </a>
         </h1>

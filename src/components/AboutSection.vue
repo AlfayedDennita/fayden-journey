@@ -34,7 +34,11 @@ import JourneySection from './JourneySection.vue';
       </p>
     </div>
 
-    <img class="about-section__decoration" src="images/decorations/yellow-chevrons.svg" alt="" />
+    <img
+      class="about-section__decoration"
+      src="https://storage.googleapis.com/fayden-journey/images/decorations/yellow-chevrons.svg"
+      alt=""
+    />
   </JourneySection>
 </template>
 

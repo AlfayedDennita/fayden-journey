@@ -39,7 +39,7 @@ onMounted(() => {
         <div class="jumbotron__photo-container">
           <img
             class="jumbotron__photo"
-            src="/images/personal-photo.png"
+            src="https://storage.googleapis.com/fayden-journey/images/personal-photo.jpg"
             alt="Muhammad Alfayed Dennita"
           />
         </div>

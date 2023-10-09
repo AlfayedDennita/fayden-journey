@@ -188,7 +188,11 @@ const socials = [
       </section>
     </div>
 
-    <img class="contacts-section__decoration" src="images/decorations/blue-diamonds.svg" alt="" />
+    <img
+      class="contacts-section__decoration"
+      src="https://storage.googleapis.com/fayden-journey/images/decorations/blue-diamonds.svg"
+      alt=""
+    />
   </JourneySection>
 </template>
 
