@@ -32,7 +32,7 @@ const works = [
     title: 'Forus',
     url: 'https://forus-beta.vercel.app',
     description:
-      'Forus is a forum app I built to fulfill my submission project in a Dicoding course: Menjadi React Web Developer Expert. I built this front-end app by consuming the data in the provided REST API. The app uses React as the main library and its ecosystem.',
+      'Forus is a forum app I built to fulfill my submission project in a Dicoding course: "Menjadi React Web Developer Expert". I built this front-end app by consuming the data in the provided REST API. The app uses React as the main library and its ecosystem.',
     logoSrc: 'https://storage.googleapis.com/fayden-journey/images/works/forus-logo.png',
     tag: 'Featured',
     stacks: [
